@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-02-11T20:07:04.379Z",
+  "components": [
+    {
+      "slug": "button",
+      "label": "Button",
+      "type": "component",
+      "hasReact": true,
+      "controls": {
+        "label": {
+          "name": "label",
+          "label": "Label",
+          "type": "text"
+        },
+        "variant": {
+          "name": "variant",
+          "label": "Variant",
+          "type": "select",
+          "options": [
+            {
+              "label": "Primary",
+              "value": "primary"
+            },
+            {
+              "label": "Secondary",
+              "value": "secondary"
+            }
+          ]
+        },
+        "disabled": {
+          "name": "disabled",
+          "label": "Disabled",
+          "type": "boolean"
+        }
+      },
+      "stories": [
+        {
+          "slug": "default",
+          "name": "Default",
+          "defaults": {
+            "label": "Button",
+            "variant": "primary",
+            "disabled": false
+          },
+          "controls": [
+            "label",
+            "variant",
+            "disabled"
+          ]
+        },
+        {
+          "slug": "secondary",
+          "name": "Secondary",
+          "defaults": {
+            "label": "Secondary",
+            "variant": "secondary",
+            "disabled": false
+          },
+          "controls": [
+            "label",
+            "variant",
+            "disabled"
+          ]
+        }
+      ]
+    }
+  ]
+}

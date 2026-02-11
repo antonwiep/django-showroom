@@ -1,0 +1,56 @@
+name: Bug report
+about: Report a reproducible defect in contracts, adapters, or runtime behavior.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please include concrete steps and expected vs actual behavior.
+  - type: input
+    id: component
+    attributes:
+      label: Component slug
+      placeholder: button
+  - type: input
+    id: story
+    attributes:
+      label: Story slug
+      placeholder: default
+  - type: dropdown
+    id: framework
+    attributes:
+      label: Framework mode
+      options:
+        - django
+        - html
+        - cotton
+        - alpine
+        - js
+        - react
+        - split
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Open ...
+        2. Set control ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots

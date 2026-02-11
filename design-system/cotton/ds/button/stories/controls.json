@@ -1,0 +1,148 @@
+{
+  "label": {
+    "name": "label",
+    "label": "Label",
+    "type": "text"
+  },
+  "variant": {
+    "name": "variant",
+    "label": "Variant",
+    "type": "select",
+    "options": [
+      {
+        "value": "primary",
+        "label": "primary"
+      },
+      {
+        "value": "secondary",
+        "label": "secondary"
+      },
+      {
+        "value": "danger",
+        "label": "danger"
+      },
+      {
+        "value": "ghost",
+        "label": "ghost"
+      },
+      {
+        "value": "outline",
+        "label": "outline"
+      }
+    ]
+  },
+  "size": {
+    "name": "size",
+    "label": "Size",
+    "type": "select",
+    "options": [
+      {
+        "value": "large",
+        "label": "large"
+      },
+      {
+        "value": "medium",
+        "label": "medium"
+      },
+      {
+        "value": "compact",
+        "label": "compact"
+      },
+      {
+        "value": "small",
+        "label": "small"
+      }
+    ]
+  },
+  "disabled": {
+    "name": "disabled",
+    "label": "Disabled",
+    "type": "boolean"
+  },
+  "icon_start": {
+    "name": "iconStart",
+    "label": "Icon start",
+    "type": "select",
+    "options": [
+      {
+        "value": "",
+        "label": "none"
+      },
+      {
+        "value": "thunder",
+        "label": "thunder"
+      },
+      {
+        "value": "search",
+        "label": "search"
+      },
+      {
+        "value": "x-clear",
+        "label": "x-clear"
+      },
+      {
+        "value": "x-mark",
+        "label": "x-mark"
+      },
+      {
+        "value": "ellipsis-horizontal",
+        "label": "ellipsis-horizontal"
+      },
+      {
+        "value": "triangle-right",
+        "label": "triangle-right"
+      },
+      {
+        "value": "square-placeholder-dashed",
+        "label": "square-placeholder-dashed"
+      },
+      {
+        "value": "chevron-down-small",
+        "label": "chevron-down-small"
+      }
+    ]
+  },
+  "icon_end": {
+    "name": "iconEnd",
+    "label": "Icon end",
+    "type": "select",
+    "options": [
+      {
+        "value": "",
+        "label": "none"
+      },
+      {
+        "value": "thunder",
+        "label": "thunder"
+      },
+      {
+        "value": "search",
+        "label": "search"
+      },
+      {
+        "value": "x-clear",
+        "label": "x-clear"
+      },
+      {
+        "value": "x-mark",
+        "label": "x-mark"
+      },
+      {
+        "value": "ellipsis-horizontal",
+        "label": "ellipsis-horizontal"
+      },
+      {
+        "value": "triangle-right",
+        "label": "triangle-right"
+      },
+      {
+        "value": "square-placeholder-dashed",
+        "label": "square-placeholder-dashed"
+      },
+      {
+        "value": "chevron-down-small",
+        "label": "chevron-down-small"
+      }
+    ]
+  }
+}

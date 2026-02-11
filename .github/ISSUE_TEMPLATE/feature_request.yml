@@ -1,0 +1,33 @@
+name: Feature request
+about: Propose an enhancement with use case and contract impact.
+labels: [enhancement]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What user need or maintainer pain does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Impact area
+      options:
+        - label: Contract change
+        - label: Adapter behavior
+        - label: Recipe system
+        - label: Split view/runtime
+        - label: Documentation only

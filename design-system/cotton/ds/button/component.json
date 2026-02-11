@@ -1,0 +1,14 @@
+{
+  "slug": "button",
+  "label": "Button",
+  "type": "component",
+  "order": 240,
+  "stories": "stories.json",
+  "react": {
+    "preview": "stories/react.preview.ts"
+  },
+  "cotton": {
+    "template": "ds/button/index.html",
+    "controls": "stories/controls.json"
+  }
+}

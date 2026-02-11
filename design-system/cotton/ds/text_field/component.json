@@ -1,0 +1,14 @@
+{
+  "slug": "text-field",
+  "label": "Text Field",
+  "type": "component",
+  "order": 250,
+  "stories": "stories.json",
+  "react": {
+    "preview": "stories/react.preview.ts"
+  },
+  "cotton": {
+    "template": "ds/text_field/index.html",
+    "controls": "stories/controls.json"
+  }
+}

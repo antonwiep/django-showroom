@@ -1,0 +1,31 @@
+{
+  "name": "django-storybook",
+  "version": "0.1.0-alpha.1",
+  "private": true,
+  "description": "Django-native Storybook for building design systems with multi-framework adapters and shared recipe CSS",
+  "type": "module",
+  "dependencies": {
+    "@alpinejs/persist": "^3.14.9",
+    "alpinejs": "^3.14.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.1"
+  },
+  "scripts": {
+    "build:ds-icons": "node scripts/generate-ds-icons.mjs",
+    "build:storybook:registry": "node scripts/validate-storybook-components.mjs && node scripts/generate-storybook-react-registry.mjs",
+    "build:storybook:bundle": "npx esbuild static/js/storybookReact.js --bundle --minify --outfile=static/js/storybookReact.bundle.js && npx esbuild static/js/core.js --bundle --minify --outfile=static/js/core.bundle.js",
+    "build:storybook": "npm run build:storybook:registry && npm run build:storybook:bundle",
+    "build": "npm run build:storybook",
+    "check:django": "python3 manage.py check",
+    "lint": "npm run build:storybook:registry",
+    "test": "npm run build:storybook:registry",
+    "runserver": "python3 manage.py runserver"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

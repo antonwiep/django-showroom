@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "neutral",
+    "name": "Neutral",
+    "template": "cotton/ds/badge/stories/badge.html",
+    "defaults": {
+      "label": "neutral",
+      "type": "neutral",
+      "mainEnabled": true,
+      "arrowEnabled": true
+    },
+    "controls": ["label", "type", "main_enabled", "arrow_enabled"]
+  },
+  {
+    "slug": "pending",
+    "name": "Pending",
+    "template": "cotton/ds/badge/stories/badge.html",
+    "defaults": {
+      "label": "pending",
+      "type": "pending",
+      "mainEnabled": true,
+      "arrowEnabled": true
+    },
+    "controls": ["label", "type", "main_enabled", "arrow_enabled"]
+  },
+  {
+    "slug": "info",
+    "name": "Info",
+    "template": "cotton/ds/badge/stories/badge.html",
+    "defaults": {
+      "label": "info",
+      "type": "info",
+      "mainEnabled": true,
+      "arrowEnabled": true
+    },
+    "controls": ["label", "type", "main_enabled", "arrow_enabled"]
+  },
+  {
+    "slug": "danger",
+    "name": "Danger",
+    "template": "cotton/ds/badge/stories/badge.html",
+    "defaults": {
+      "label": "danger",
+      "type": "danger",
+      "mainEnabled": true,
+      "arrowEnabled": true
+    },
+    "controls": ["label", "type", "main_enabled", "arrow_enabled"]
+  },
+  {
+    "slug": "warning",
+    "name": "Warning",
+    "template": "cotton/ds/badge/stories/badge.html",
+    "defaults": {
+      "label": "warning",
+      "type": "warning",
+      "mainEnabled": true,
+      "arrowEnabled": true
+    },
+    "controls": ["label", "type", "main_enabled", "arrow_enabled"]
+  },
+  {
+    "slug": "success",
+    "name": "Success",
+    "template": "cotton/ds/badge/stories/badge.html",
+    "defaults": {
+      "label": "success",
+      "type": "success",
+      "mainEnabled": true,
+      "arrowEnabled": true
+    },
+    "controls": ["label", "type", "main_enabled", "arrow_enabled"]
+  },
+  {
+    "slug": "muted",
+    "name": "Muted",
+    "template": "cotton/ds/badge/stories/badge.html",
+    "defaults": {
+      "label": "muted",
+      "type": "muted",
+      "mainEnabled": true,
+      "arrowEnabled": true
+    },
+    "controls": ["label", "type", "main_enabled", "arrow_enabled"]
+  }
+]

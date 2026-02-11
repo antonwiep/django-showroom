@@ -1,0 +1,10 @@
+<div class="flex min-h-52 min-w-[420px] items-center justify-center">
+  <c-ds.badge
+    x-effect="
+      label = args.label || 'neutral';
+      type = ['neutral', 'pending', 'info', 'danger', 'warning', 'success', 'muted'].includes(args.type) ? args.type : 'neutral';
+      mainEnabled = Boolean(args.mainEnabled);
+      arrowEnabled = Boolean(args.arrowEnabled);
+    "
+  ></c-ds.badge>
+</div>

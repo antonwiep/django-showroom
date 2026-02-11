@@ -1,0 +1,23 @@
+<div class="flex min-h-52 min-w-[420px] items-center justify-center">
+    <div class="ds-text-field-story-wrap">
+        <c-ds.text-field
+            @ds-text-field-change="args.value = $event.detail.value"
+            x-effect="
+                label = args.label || '';
+                placeholder = args.placeholder || '';
+                showLabel = args.showLabel !== false;
+                optional = Boolean(args.optional);
+                size = args.size === 'sm' ? 'sm' : 'md';
+                clearable = Boolean(args.clearable);
+                error = args.error || '';
+                disabled = Boolean(args.disabled);
+                const nextValue = args.value || '';
+                const inputEl = $el.querySelector('input');
+                const isEditing = inputEl && document.activeElement === inputEl;
+                if (!isEditing && value !== nextValue) {
+                  value = nextValue;
+                }
+            "
+        ></c-ds.text-field>
+    </div>
+</div>

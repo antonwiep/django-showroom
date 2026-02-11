@@ -1,0 +1,14 @@
+{
+  "slug": "badge",
+  "label": "Badge",
+  "type": "component",
+  "order": 260,
+  "stories": "stories.json",
+  "react": {
+    "preview": "stories/react.preview.ts"
+  },
+  "cotton": {
+    "template": "ds/badge/index.html",
+    "controls": "stories/controls.json"
+  }
+}

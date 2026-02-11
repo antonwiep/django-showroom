@@ -1,0 +1,89 @@
+@layer components {
+  .ds-button {
+    @apply inset-ring inset-ring-transparent inline-flex cursor-pointer items-center justify-center transition-colors;
+  }
+
+  .ds-button svg {
+    @apply size-4;
+  }
+
+  .ds-button .ds-button-icon:only-child,
+  .ds-button > svg:only-child {
+    @apply -mx-1;
+  }
+
+  .ds-button-label {
+    @apply inline-flex items-center justify-center;
+  }
+
+  .ds-button-label[data-size="large"] {
+    @apply px-1;
+  }
+
+  .ds-button-label[data-size="medium"],
+  .ds-button-label[data-size="compact"],
+  .ds-button-label[data-size="small"] {
+    @apply px-0.5;
+  }
+
+  .ds-button[data-size="large"] {
+    @apply h-10 gap-1 rounded-10 px-3 text-sm-medium;
+  }
+
+  .ds-button[data-size="medium"] {
+    @apply h-8 gap-1 rounded-8 px-2 text-sm-medium;
+  }
+
+  .ds-button[data-size="compact"] {
+    @apply gap-1 rounded-6 px-1.5 py-1.25 text-sm-medium;
+  }
+
+  .ds-button[data-size="small"] {
+    @apply rounded-6 px-1.5 py-1 text-mini-medium;
+  }
+
+  .ds-button[data-variant="primary"] {
+    @apply inset-ring-alpha-6 bg-a9 text-g0 hover:bg-a10 active:bg-a11;
+  }
+
+  .ds-button[data-variant="secondary"] {
+    @apply bg-g3 text-g10 hover:bg-g4 active:bg-g5;
+  }
+
+  .ds-button[data-variant="danger"] {
+    @apply inset-ring-alpha-6 bg-d9 text-g0 hover:bg-d10 active:bg-d11;
+  }
+
+  .ds-button[data-variant="ghost"] {
+    @apply text-g10 hover:bg-g4 active:bg-g5;
+  }
+
+  .ds-button[data-variant="outline"] {
+    @apply inset-ring-alpha-10 text-g10 hover:bg-g4 active:bg-g5;
+  }
+
+  .ds-button[data-active="true"][data-disabled="false"][data-variant="primary"] {
+    @apply bg-a10;
+  }
+
+  .ds-button[data-active="true"][data-disabled="false"][data-variant="secondary"] {
+    @apply bg-g4;
+  }
+
+  .ds-button[data-active="true"][data-disabled="false"][data-variant="danger"] {
+    @apply bg-d10;
+  }
+
+  .ds-button[data-active="true"][data-disabled="false"][data-variant="ghost"] {
+    @apply bg-g4;
+  }
+
+  .ds-button[data-active="true"][data-disabled="false"][data-variant="outline"] {
+    @apply bg-g3;
+  }
+
+  .ds-button[data-disabled="true"],
+  .ds-button:disabled {
+    @apply !inset-ring-transparent cursor-not-allowed bg-g3 text-g9 hover:bg-g3 active:bg-g3;
+  }
+}

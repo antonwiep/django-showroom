@@ -1,0 +1,7 @@
+{
+  "slug": "iconography",
+  "label": "Iconography",
+  "type": "page",
+  "order": 20,
+  "template": "storybook/foundations/iconography/page.html"
+}

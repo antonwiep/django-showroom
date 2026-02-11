@@ -1,0 +1,199 @@
+/**
+ * Design System Tokens
+ * Single source of truth for all design tokens.
+ * Import this file in any CSS that needs access to these tokens.
+ */
+
+@theme {
+  /* ============================================
+   * COLORS
+   * ============================================ */
+
+  /** Panels */
+  --color-p1: oklch(1 0 0);
+  --color-p0: oklch(0.982 0 0);
+
+  /** Grey */
+  --color-g0: oklch(1 0 0);
+  --color-g1: oklch(0.991 0 0);
+  --color-g2: oklch(0.982 0 0);
+  --color-g3: oklch(0.955 0 0);
+  --color-g4: oklch(0.931 0 0);
+  --color-g5: oklch(0.91 0 0);
+  --color-g6: oklch(0.885 0 0);
+  --color-g7: oklch(0.851 0 0);
+  --color-g8: oklch(0.792 0 0);
+  --color-g9: oklch(0.643 0 0);
+  --color-g10: oklch(0.507 0 0);
+  --color-g11: oklch(0.361 0.003 286.228);
+  --color-g12: oklch(0.21 0.004 286.059);
+
+  /** Accent (blue) */
+  --color-a1: oklch(0.994 0.001 286.376);
+  --color-a2: oklch(0.982 0.008 271.33);
+  --color-a3: oklch(0.961 0.018 269.09);
+  --color-a4: oklch(0.933 0.032 266.166);
+  --color-a5: oklch(0.901 0.048 267.198);
+  --color-a6: oklch(0.857 0.07 268.824);
+  --color-a7: oklch(0.804 0.098 270.675);
+  --color-a8: oklch(0.73 0.139 271.732);
+  --color-a9: oklch(0.571 0.235 271.643);
+  --color-a10: oklch(0.526 0.213 271.816);
+  --color-a11: oklch(0.511 0.213 271.713);
+  --color-a12: oklch(0.312 0.107 271.681);
+
+  /** Yellow */
+  --color-y1: oklch(0.994 0.003 84.559);
+  --color-y2: oklch(0.981 0.02 84.59);
+  --color-y3: oklch(0.954 0.047 83.943);
+  --color-y4: oklch(0.928 0.065 78.977);
+  --color-y5: oklch(0.902 0.086 77.209);
+  --color-y6: oklch(0.866 0.114 74.958);
+  --color-y7: oklch(0.823 0.122 68.55);
+  --color-y8: oklch(0.755 0.141 68.718);
+  --color-y9: oklch(0.784 0.171 68.907);
+  --color-y10: oklch(0.751 0.141 69.244);
+  --color-y11: oklch(0.575 0.132 62.633);
+  --color-y12: oklch(0.353 0.053 69.99);
+
+  /** Red (Danger) */
+  --color-d1: oklch(0.993 0.003 17.212);
+  --color-d2: oklch(0.982 0.009 26.017);
+  --color-d3: oklch(0.955 0.022 27.81);
+  --color-d4: oklch(0.918 0.042 27.012);
+  --color-d5: oklch(0.886 0.06 27.206);
+  --color-d6: oklch(0.853 0.08 26.442);
+  --color-d7: oklch(0.806 0.102 26.189);
+  --color-d8: oklch(0.744 0.129 25.796);
+  --color-d9: oklch(0.631 0.218 26.103);
+  --color-d10: oklch(0.591 0.22 26.112);
+  --color-d11: oklch(0.56 0.218 26.228);
+  --color-d12: oklch(0.34 0.115 26.406);
+
+  /** Green (Success) */
+  --color-s1: oklch(0.994 0.006 137.773);
+  --color-s2: oklch(0.982 0.011 136.559);
+  --color-s3: oklch(0.96 0.025 137.807);
+  --color-s4: oklch(0.934 0.04 137.208);
+  --color-s5: oklch(0.901 0.058 136.615);
+  --color-s6: oklch(0.858 0.079 136.575);
+  --color-s7: oklch(0.798 0.104 136.63);
+  --color-s8: oklch(0.715 0.142 136.47);
+  --color-s9: oklch(0.6 0.155 136.544);
+  --color-s10: oklch(0.555 0.142 136.627);
+  --color-s11: oklch(0.526 0.141 136.444);
+  --color-s12: oklch(0.326 0.058 136.282);
+
+  /** Alpha (transparency) */
+  --color-alpha-2: oklch(0 0 0 / 0.02);
+  --color-alpha-4: oklch(0 0 0 / 0.04);
+  --color-alpha-6: oklch(0 0 0 / 0.06);
+  --color-alpha-8: oklch(0 0 0 / 0.08);
+  --color-alpha-10: oklch(0 0 0 / 0.1);
+  --color-alpha-12: oklch(0 0 0 / 0.12);
+  --color-alpha-16: oklch(0 0 0 / 0.16);
+  --color-alpha-24: oklch(0 0 0 / 0.24);
+  --color-alpha-36: oklch(0 0 0 / 0.36);
+  --color-alpha-48: oklch(0 0 0 / 0.48);
+  --color-alpha-80: oklch(0 0 0 / 0.8);
+
+  /** Status colors */
+  --color-status-neutral-0: oklch(0.97 0 0);
+  --color-status-neutral-1: oklch(0.549 0 0);
+  --color-status-pending-0: oklch(0.98 0.024 99.098);
+  --color-status-pending-1: oklch(0.434 0.085 83.846);
+  --color-status-info-0: oklch(0.958 0.02 279.937);
+  --color-status-info-1: oklch(0.404 0.228 266.783);
+  --color-status-danger-0: oklch(0.954 0.019 38.151);
+  --color-status-danger-1: oklch(0.435 0.122 41.412);
+  --color-status-warning-0: oklch(0.966 0.018 70.243);
+  --color-status-warning-1: oklch(0.325 0.041 68.444);
+  --color-status-success-0: oklch(0.963 0.03 139.1);
+  --color-status-success-1: oklch(0.399 0.094 139.147);
+  --color-status-muted-0: oklch(0.937 0 0);
+  --color-status-muted-1: oklch(0.549 0 0);
+
+  /* ============================================
+   * TYPOGRAPHY
+   * ============================================ */
+
+  --text-micro: 10px;
+  --text-micro--font-weight: var(--font-weight--regular);
+  --text-micro--line-height: 14px;
+
+  --text-micro-medium: 10px;
+  --text-micro-medium--font-weight: var(--font-weight--medium);
+  --text-micro-medium--line-height: 14px;
+
+  --text-macro-semibold: 8px;
+  --text-macro-semibold--font-weight: 600;
+  --text-macro-semibold--line-height: 14px;
+  --text-macro-semibold--letter-spacing: 0.5px;
+
+  --text-mini: 12px;
+  --text-mini--font-weight: var(--font-weight--regular);
+  --text-mini--line-height: 15px;
+
+  --text-mini-medium: 12px;
+  --text-mini-medium--font-weight: var(--font-weight--medium);
+  --text-mini-medium--line-height: 15px;
+
+  --text-sm: 13px;
+  --text-sm--font-weight: var(--font-weight--regular);
+  --text-sm--line-height: 18px;
+  --text-sm--letter-spacing: -0.28px;
+
+  --text-sm-medium: 13px;
+  --text-sm-medium--font-weight: var(--font-weight--medium);
+  --text-sm-medium--line-height: 18px;
+  --text-sm-medium--letter-spacing: -0.28px;
+
+  --text-regular: 14px;
+  --text-regular--font-weight: var(--font-weight--regular);
+  --text-regular--line-height: 20px;
+  --text-regular--letter-spacing: -0.13px;
+
+  --text-regular-medium: 14px;
+  --text-regular-medium--font-weight: var(--font-weight--medium);
+  --text-regular-medium--line-height: 20px;
+  --text-regular-medium--letter-spacing: -0.13px;
+
+  /* ============================================
+   * RADIUS
+   * ============================================ */
+
+  --radius-0: 0px;
+  --radius-2: 2px;
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-full: 999px;
+
+  /* ============================================
+   * SHADOWS
+   * ============================================ */
+
+  --shadow-xs: 0 0 0 1px var(--color-alpha-6), 0 1px 3px 0 var(--color-alpha-4);
+  --shadow-md:
+    0px 0px 1px 0px rgba(0, 0, 0, 0.27),
+    0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0px 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+@layer base {
+  :root {
+    --font-weight--regular: 450;
+    --font-weight--medium: 500;
+  }
+}
+
+@utility scrollbar-hidden {
+  -ms-scrollbar-width: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

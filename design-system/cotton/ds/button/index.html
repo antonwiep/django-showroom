@@ -1,0 +1,27 @@
+<c-vars
+  variant="primary"
+  size="large"
+  disabled="false"
+  is_active="false"
+  type="button"
+  icon_start
+  icon_end
+  class_name=""
+/>
+
+<button
+  type="{{ type|default:'button' }}"
+  class="ds-button {{ class_name }} {{ attrs.class }}"
+  data-variant="{{ variant|default:'primary' }}"
+  data-size="{{ size|default:'large' }}"
+  data-disabled="{{ disabled|default:'false'|lower }}"
+  data-active="{{ is_active|default:'false'|lower }}"
+  {% if disabled|default:'false'|lower == 'true' %}disabled{% endif %}
+  {{ attrs }}
+>
+  {{ icon_start }}
+
+  <span class="ds-button-label" data-size="{{ size|default:'large' }}">{{ slot }}</span>
+
+  {{ icon_end }}
+</button>

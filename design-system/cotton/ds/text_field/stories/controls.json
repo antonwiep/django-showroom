@@ -1,0 +1,57 @@
+{
+  "label": {
+    "name": "label",
+    "label": "Label",
+    "type": "text"
+  },
+  "placeholder": {
+    "name": "placeholder",
+    "label": "Placeholder",
+    "type": "text"
+  },
+  "value": {
+    "name": "value",
+    "label": "Value",
+    "type": "text"
+  },
+  "show_label": {
+    "name": "showLabel",
+    "label": "Show label",
+    "type": "boolean"
+  },
+  "optional": {
+    "name": "optional",
+    "label": "Optional",
+    "type": "boolean"
+  },
+  "size": {
+    "name": "size",
+    "label": "Size",
+    "type": "select",
+    "options": [
+      {
+        "value": "sm",
+        "label": "sm"
+      },
+      {
+        "value": "md",
+        "label": "md"
+      }
+    ]
+  },
+  "clearable": {
+    "name": "clearable",
+    "label": "Clearable",
+    "type": "boolean"
+  },
+  "error": {
+    "name": "error",
+    "label": "Error",
+    "type": "text"
+  },
+  "disabled": {
+    "name": "disabled",
+    "label": "Disabled",
+    "type": "boolean"
+  }
+}

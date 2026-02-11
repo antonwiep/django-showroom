@@ -1,0 +1,52 @@
+{
+  "label": {
+    "name": "label",
+    "label": "Label",
+    "type": "text"
+  },
+  "type": {
+    "name": "type",
+    "label": "Type",
+    "type": "select",
+    "options": [
+      {
+        "value": "neutral",
+        "label": "neutral"
+      },
+      {
+        "value": "pending",
+        "label": "pending"
+      },
+      {
+        "value": "info",
+        "label": "info"
+      },
+      {
+        "value": "danger",
+        "label": "danger"
+      },
+      {
+        "value": "warning",
+        "label": "warning"
+      },
+      {
+        "value": "success",
+        "label": "success"
+      },
+      {
+        "value": "muted",
+        "label": "muted"
+      }
+    ]
+  },
+  "main_enabled": {
+    "name": "mainEnabled",
+    "label": "Main enabled",
+    "type": "boolean"
+  },
+  "arrow_enabled": {
+    "name": "arrowEnabled",
+    "label": "Arrow enabled",
+    "type": "boolean"
+  }
+}

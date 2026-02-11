@@ -1,0 +1,155 @@
+[
+  {
+    "slug": "default",
+    "name": "Default",
+    "template": "cotton/ds/text_field/stories/field.html",
+    "defaults": {
+      "label": "Label",
+      "placeholder": "Value",
+      "value": "",
+      "showLabel": true,
+      "optional": false,
+      "size": "md",
+      "clearable": false,
+      "error": "",
+      "disabled": false
+    },
+    "controls": ["label", "placeholder", "value", "show_label", "optional", "size", "clearable", "error", "disabled"]
+  },
+  {
+    "slug": "with-search-icon",
+    "name": "With Search Icon",
+    "template": "cotton/ds/text_field/stories/field_with_icon.html",
+    "defaults": {
+      "label": "Search",
+      "placeholder": "Search...",
+      "value": "",
+      "showLabel": true,
+      "optional": false,
+      "size": "md",
+      "clearable": false,
+      "error": "",
+      "disabled": false
+    },
+    "controls": ["label", "placeholder", "value", "show_label", "optional", "size", "clearable", "error", "disabled"]
+  },
+  {
+    "slug": "optional",
+    "name": "Optional",
+    "template": "cotton/ds/text_field/stories/field.html",
+    "defaults": {
+      "label": "Notes",
+      "placeholder": "Optional notes...",
+      "value": "",
+      "showLabel": true,
+      "optional": true,
+      "size": "md",
+      "clearable": false,
+      "error": "",
+      "disabled": false
+    },
+    "controls": ["label", "placeholder", "value", "show_label", "optional", "size", "clearable", "error", "disabled"]
+  },
+  {
+    "slug": "with-error",
+    "name": "With Error",
+    "template": "cotton/ds/text_field/stories/field.html",
+    "defaults": {
+      "label": "Email",
+      "placeholder": "Value",
+      "value": "invalid-email",
+      "showLabel": true,
+      "optional": false,
+      "size": "md",
+      "clearable": false,
+      "error": "Invalid email address",
+      "disabled": false
+    },
+    "controls": ["label", "placeholder", "value", "show_label", "optional", "size", "clearable", "error", "disabled"]
+  },
+  {
+    "slug": "clearable",
+    "name": "Clearable",
+    "template": "cotton/ds/text_field/stories/field_with_icon.html",
+    "defaults": {
+      "label": "Search",
+      "placeholder": "Value",
+      "value": "Kevin",
+      "showLabel": true,
+      "optional": false,
+      "size": "md",
+      "clearable": true,
+      "error": "",
+      "disabled": false
+    },
+    "controls": ["label", "placeholder", "value", "show_label", "optional", "size", "clearable", "error", "disabled"]
+  },
+  {
+    "slug": "no-label",
+    "name": "No Label",
+    "template": "cotton/ds/text_field/stories/field_with_icon.html",
+    "defaults": {
+      "label": "",
+      "placeholder": "Search...",
+      "value": "",
+      "showLabel": false,
+      "optional": false,
+      "size": "md",
+      "clearable": false,
+      "error": "",
+      "disabled": false
+    },
+    "controls": ["label", "placeholder", "value", "show_label", "optional", "size", "clearable", "error", "disabled"]
+  },
+  {
+    "slug": "disabled",
+    "name": "Disabled",
+    "template": "cotton/ds/text_field/stories/field.html",
+    "defaults": {
+      "label": "Disabled",
+      "placeholder": "Cannot edit...",
+      "value": "",
+      "showLabel": true,
+      "optional": false,
+      "size": "md",
+      "clearable": false,
+      "error": "",
+      "disabled": true
+    },
+    "controls": ["label", "placeholder", "value", "show_label", "optional", "size", "clearable", "error", "disabled"]
+  },
+  {
+    "slug": "disabled-with-value",
+    "name": "Disabled With Value",
+    "template": "cotton/ds/text_field/stories/field.html",
+    "defaults": {
+      "label": "Disabled",
+      "placeholder": "Value",
+      "value": "Some value",
+      "showLabel": true,
+      "optional": false,
+      "size": "md",
+      "clearable": true,
+      "error": "",
+      "disabled": true
+    },
+    "controls": ["label", "placeholder", "value", "show_label", "optional", "size", "clearable", "error", "disabled"]
+  },
+  {
+    "slug": "small",
+    "name": "Small",
+    "template": "cotton/ds/text_field/stories/field.html",
+    "defaults": {
+      "label": "Small",
+      "placeholder": "Value",
+      "value": "",
+      "showLabel": true,
+      "optional": false,
+      "size": "sm",
+      "clearable": false,
+      "error": "",
+      "disabled": false
+    },
+    "controls": ["label", "placeholder", "value", "show_label", "optional", "size", "clearable", "error", "disabled"]
+  }
+]

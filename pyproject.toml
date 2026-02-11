@@ -1,0 +1,21 @@
+[project]
+name = "django-storybook"
+version = "0.1.0a1"
+description = "Django-native Storybook for building design systems with multi-framework adapters and shared recipe CSS"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+  { name = "Anton Wieprecht" }
+]
+dependencies = [
+  "django>=5.1.0",
+  "django-cotton>=2.0.3",
+]
+
+[tool.setuptools.packages.find]
+include = ["apps*", "storybook_config*"]
+
+[tool.pytest.ini_options]
+python_files = ["test_*.py", "*_test.py"]
+addopts = "-q"
