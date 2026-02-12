@@ -1,6 +1,6 @@
 # Adding Components From an Existing Codebase
 
-This guide describes how to migrate components from an existing Django project into Django Storybook.
+This guide describes how to migrate components from an existing Django project into Django Showroom.
 
 ## Per-component migration
 

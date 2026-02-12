@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "../../components/tokens.css";
+@import "../../components/cotton/recipes.css";
+
+@source "../../showroom/templates/";
+@source "../../components/";

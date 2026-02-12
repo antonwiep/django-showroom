@@ -1,8 +1,8 @@
-"""Tests for storybook.catalog.components."""
+"""Tests for showroom.catalog.components."""
 
 import json
 
-from storybook.catalog.components import (
+from showroom.catalog.components import (
     _component_from_metadata,
     _foundation_from_metadata,
     _load_component_controls,
@@ -135,7 +135,7 @@ class TestLoadComponentControls:
 class TestFoundationFromMetadata:
     def test_valid_foundation(self):
         result = _foundation_from_metadata(
-            {"slug": "colors", "label": "Colors", "template": "storybook/foundations/colors/page.html", "order": 10}
+            {"slug": "colors", "label": "Colors", "template": "showroom/foundations/colors/page.html", "order": 10}
         )
         assert result is not None
         assert result["slug"] == "colors"

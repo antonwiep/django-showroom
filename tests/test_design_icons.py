@@ -1,6 +1,6 @@
-"""Tests for storybook.design_icons."""
+"""Tests for showroom.design_icons."""
 
-from storybook.design_icons import (
+from showroom.design_icons import (
     get_design_icon_map,
     get_design_icons,
     render_design_icon,

@@ -4,8 +4,8 @@ from django.shortcuts import redirect
 from django.urls import include, path
 
 urlpatterns = [
-    path("", lambda request: redirect("storybook:index")),
-    path("storybook/", include("storybook.urls")),
+    path("", lambda request: redirect("showroom:index")),
+    path("showroom/", include("showroom.urls")),
 ]
 
 if settings.DEBUG:

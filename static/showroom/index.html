@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>No-Django Showroom Playground</title>
+    <link rel="stylesheet" href="/static/showroom/styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>No-Django Playground</h2>
+        <p class="small">Contract + split-view smoke UI without a Django host.</p>
+
+        <div class="controls" id="global-controls">
+          <label>
+            Component
+            <select id="component-select"></select>
+          </label>
+
+          <label>
+            Story
+            <select id="story-select"></select>
+          </label>
+
+          <label>
+            Mode
+            <select id="mode-select">
+              <option value="django">Django</option>
+              <option value="react">React</option>
+              <option value="split">Split</option>
+            </select>
+          </label>
+        </div>
+      </aside>
+
+      <main class="main">
+        <section class="card">
+          <h3>Controls</h3>
+          <div class="controls" id="story-controls"></div>
+        </section>
+
+        <section class="card">
+          <h3>Preview</h3>
+          <div class="preview-grid" id="preview-grid">
+            <div class="preview-pane" id="django-pane">
+              <div class="preview-head">Django/Cotton</div>
+              <div class="preview-body" id="django-root"></div>
+            </div>
+            <div class="preview-pane" id="react-pane">
+              <div class="preview-head">React</div>
+              <div class="preview-body" id="react-root"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module">
+      import { showroomReactRegistry } from "/static/showroom/showroomReact.registry.generated.js";
+
+      const fixtures = await fetch("/static/showroom/story-fixtures.generated.json").then((r) => r.json());
+
+      const componentSelect = document.getElementById("component-select");
+      const storySelect = document.getElementById("story-select");
+      const modeSelect = document.getElementById("mode-select");
+      const controlsRoot = document.getElementById("story-controls");
+      const previewGrid = document.getElementById("preview-grid");
+      const djangoRoot = document.getElementById("django-root");
+      const reactRoot = document.getElementById("react-root");
+      const djangoPane = document.getElementById("django-pane");
+      const reactPane = document.getElementById("react-pane");
+
+      const state = {
+        componentSlug: fixtures.components[0]?.slug ?? "",
+        storySlug: fixtures.components[0]?.stories[0]?.slug ?? "",
+        mode: "split",
+        args: {}
+      };
+
+      function getComponent() {
+        return fixtures.components.find((c) => c.slug === state.componentSlug);
+      }
+
+      function getStory() {
+        const component = getComponent();
+        return component?.stories.find((s) => s.slug === state.storySlug);
+      }
+
+      function baseButton(args) {
+        const className = args.variant === "secondary" ? "ds-button ds-button--secondary" : "ds-button ds-button--primary";
+        const label = typeof args.label === "string" && args.label.trim() ? args.label : "Button";
+        const disabled = args.disabled ? "disabled" : "";
+        return `<button class="${className}" type="button" ${disabled}>${label}</button>`;
+      }
+
+      function renderDjango() {
+        const component = getComponent();
+        if (!component) {
+          djangoRoot.textContent = "No component selected.";
+          return;
+        }
+
+        if (component.slug === "button") {
+          djangoRoot.innerHTML = baseButton(state.args);
+          return;
+        }
+
+        djangoRoot.textContent = `No Django renderer for '${component.slug}'.`;
+      }
+
+      function renderReact() {
+        const storyEntry = showroomReactRegistry?.[state.componentSlug]?.[state.storySlug];
+        const renderFn = typeof storyEntry === "function" ? storyEntry : storyEntry?.render;
+
+        if (!renderFn) {
+          reactRoot.textContent = "React preview not implemented for this component/story.";
+          return;
+        }
+
+        const output = renderFn({ args: state.args, onArgsChange: () => {}, portalContainer: null });
+        reactRoot.innerHTML = typeof output === "string" ? output : "Invalid React renderer output.";
+      }
+
+      function renderMode() {
+        previewGrid.classList.toggle("split", state.mode === "split");
+
+        djangoPane.style.display = state.mode === "react" ? "none" : "block";
+        reactPane.style.display = state.mode === "django" ? "none" : "block";
+
+        if (state.mode !== "react") {
+          renderDjango();
+        }
+
+        if (state.mode !== "django") {
+          renderReact();
+        }
+      }
+
+      function resetArgsFromDefaults() {
+        const story = getStory();
+        state.args = { ...(story?.defaults ?? {}) };
+      }
+
+      function renderControlInput(control) {
+        const wrapper = document.createElement("label");
+        wrapper.textContent = control.label;
+
+        if (control.type === "boolean") {
+          const input = document.createElement("input");
+          input.type = "checkbox";
+          input.checked = Boolean(state.args[control.name]);
+          input.addEventListener("change", () => {
+            state.args[control.name] = input.checked;
+            renderMode();
+          });
+          wrapper.appendChild(input);
+          return wrapper;
+        }
+
+        if (control.type === "select") {
+          const select = document.createElement("select");
+          const options = Array.isArray(control.options) ? control.options : [];
+          options.forEach((option) => {
+            const el = document.createElement("option");
+            el.value = String(option.value);
+            el.textContent = String(option.label);
+            if (state.args[control.name] === option.value) {
+              el.selected = true;
+            }
+            select.appendChild(el);
+          });
+          select.addEventListener("change", () => {
+            state.args[control.name] = select.value;
+            renderMode();
+          });
+          wrapper.appendChild(select);
+          return wrapper;
+        }
+
+        const input = document.createElement("input");
+        input.type = control.type === "number" ? "number" : "text";
+        input.value = state.args[control.name] ?? "";
+        input.addEventListener("input", () => {
+          state.args[control.name] = control.type === "number" ? Number(input.value) : input.value;
+          renderMode();
+        });
+        wrapper.appendChild(input);
+        return wrapper;
+      }
+
+      function renderControls() {
+        controlsRoot.innerHTML = "";
+        const component = getComponent();
+        const story = getStory();
+
+        if (!component || !story) {
+          return;
+        }
+
+        const controlKeys = Array.isArray(story.controls) ? story.controls : [];
+        controlKeys.forEach((key) => {
+          const control = component.controls?.[key];
+          if (!control) {
+            return;
+          }
+          controlsRoot.appendChild(renderControlInput(control));
+        });
+      }
+
+      function renderStoriesForComponent() {
+        storySelect.innerHTML = "";
+        const component = getComponent();
+        if (!component) {
+          return;
+        }
+
+        component.stories.forEach((story) => {
+          const option = document.createElement("option");
+          option.value = story.slug;
+          option.textContent = story.name;
+          if (story.slug === state.storySlug) {
+            option.selected = true;
+          }
+          storySelect.appendChild(option);
+        });
+      }
+
+      function renderComponents() {
+        componentSelect.innerHTML = "";
+        fixtures.components.forEach((component) => {
+          const option = document.createElement("option");
+          option.value = component.slug;
+          option.textContent = component.label;
+          if (component.slug === state.componentSlug) {
+            option.selected = true;
+          }
+          componentSelect.appendChild(option);
+        });
+      }
+
+      componentSelect.addEventListener("change", () => {
+        state.componentSlug = componentSelect.value;
+        const component = getComponent();
+        state.storySlug = component?.stories[0]?.slug ?? "";
+        renderStoriesForComponent();
+        resetArgsFromDefaults();
+        renderControls();
+        renderMode();
+      });
+
+      storySelect.addEventListener("change", () => {
+        state.storySlug = storySelect.value;
+        resetArgsFromDefaults();
+        renderControls();
+        renderMode();
+      });
+
+      modeSelect.addEventListener("change", () => {
+        state.mode = modeSelect.value;
+        renderMode();
+      });
+
+      function init() {
+        modeSelect.value = state.mode;
+        renderComponents();
+        renderStoriesForComponent();
+        resetArgsFromDefaults();
+        renderControls();
+        renderMode();
+      }
+
+      init();
+    </script>
+  </body>
+</html>

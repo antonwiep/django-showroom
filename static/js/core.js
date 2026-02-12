@@ -1,4 +1,4 @@
-// Core Alpine.js setup for Django Storybook
+// Core Alpine.js setup for Django Showroom
 import persist from '@alpinejs/persist';
 import Alpine from 'alpinejs';
 

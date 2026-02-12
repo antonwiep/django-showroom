@@ -6,7 +6,7 @@ from pathlib import Path
 from django.conf import settings
 
 COMPONENTS_ROOT = Path(settings.BASE_DIR) / "components" / "cotton" / "ds"
-FOUNDATIONS_ROOT = Path(settings.BASE_DIR) / "storybook" / "foundations"
+FOUNDATIONS_ROOT = Path(settings.BASE_DIR) / "showroom" / "foundations"
 
 
 class TestComponentJsonContracts:

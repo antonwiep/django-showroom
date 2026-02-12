@@ -1,7 +1,0 @@
-{
-  "slug": "colors",
-  "label": "Colors",
-  "type": "page",
-  "order": 10,
-  "template": "storybook/foundations/colors/page.html"
-}

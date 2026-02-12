@@ -1,4 +1,4 @@
-# Django Storybook
+# Django Showroom
 
 A Django-native component development environment for building design systems. Develop, document, and test atomic UI components in isolation — with multi-framework rendering, shared story contracts, and side-by-side comparison.
 
@@ -15,7 +15,7 @@ This architecture solves both by making contracts and styling framework-agnostic
 
 ## How it differs from Storybook.js integrations
 
-| | Django Storybook | storybook-django (Torchbox) |
+| | Django Showroom | storybook-django (Torchbox) |
 |---|---|---|
 | **Architecture** | Django-native — single server | Storybook.js wrapper — requires Django + Node servers |
 | **Story format** | JSON contracts (`component.json`, `stories.json`) | JavaScript CSF (Component Story Format) |
@@ -37,7 +37,7 @@ For full details, see [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ```text
 .
-├── storybook/               # Django host app (views, catalog, scripts, schemas)
+├── showroom/                # Django host app (views, catalog, scripts, schemas)
 ├── components/
 │   ├── cotton/ds/           # Example components (button, badge, text_field)
 │   ├── icons/               # Icon source (TSX → SVG pipeline)
@@ -76,7 +76,7 @@ python3 manage.py check
 python3 manage.py runserver
 ```
 
-Open: `http://127.0.0.1:8000/storybook/`
+Open: `http://127.0.0.1:8000/showroom/`
 
 ## Example components
 
@@ -107,10 +107,10 @@ Then run `npm run build` to validate and regenerate the registry.
 
 ## Component scoping
 
-Limit which components appear in the Storybook navigation by setting `STORYBOOK_COMPONENT_ALLOWLIST` in `config/settings.py`:
+Limit which components appear in the Showroom navigation by setting `SHOWROOM_COMPONENT_ALLOWLIST` in `config/settings.py`:
 
 ```python
-STORYBOOK_COMPONENT_ALLOWLIST = ["button", "badge"]
+SHOWROOM_COMPONENT_ALLOWLIST = ["button", "badge"]
 ```
 
 Set it to `[]` or remove it to show all components.
@@ -141,8 +141,8 @@ Set it to `[]` or remove it to show all components.
 
 ## Community and support
 
-- Usage and setup questions: [GitHub Discussions](https://github.com/antonwiep/django-storybook/discussions)
-- Bug reports: [GitHub Issues](https://github.com/antonwiep/django-storybook/issues)
+- Usage and setup questions: [GitHub Discussions](https://github.com/antonwiep/django-showroom/discussions)
+- Bug reports: [GitHub Issues](https://github.com/antonwiep/django-showroom/issues)
 
 ## License
 

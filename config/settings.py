@@ -2,14 +2,14 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "dev-only-storybook-secret-key"
+SECRET_KEY = "dev-only-showroom-secret-key"
 DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django_cotton",
-    "storybook",
+    "showroom",
 ]
 
 MIDDLEWARE = [

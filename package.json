@@ -1,8 +1,8 @@
 {
-  "name": "django-storybook",
+  "name": "django-showroom",
   "version": "0.1.0-alpha.1",
   "private": true,
-  "description": "Django-native Storybook for building design systems with multi-framework adapters and shared recipe CSS",
+  "description": "Django-native Showroom for building design systems with multi-framework adapters and shared recipe CSS",
   "type": "module",
   "dependencies": {
     "@alpinejs/persist": "^3.14.9",
@@ -12,17 +12,19 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
     "esbuild": "^0.23.1"
   },
   "scripts": {
-    "build:ds-icons": "node storybook/scripts/generate-ds-icons.mjs",
-    "build:storybook:registry": "node storybook/scripts/validate-storybook-components.mjs && node storybook/scripts/generate-storybook-react-registry.mjs",
-    "build:storybook:bundle": "npx esbuild static/js/storybookReact.js --bundle --minify --outfile=static/js/storybookReact.bundle.js && npx esbuild static/js/core.js --bundle --minify --outfile=static/js/core.bundle.js",
-    "build:storybook": "npm run build:storybook:registry && npm run build:storybook:bundle",
-    "build": "npm run build:storybook",
+    "build:css": "npx @tailwindcss/cli -i static/css/input.css -o static/css/output.css",
+    "build:ds-icons": "node showroom/scripts/generate-ds-icons.mjs",
+    "build:showroom:registry": "node showroom/scripts/validate-showroom-components.mjs && node showroom/scripts/generate-showroom-react-registry.mjs",
+    "build:showroom:bundle": "npx esbuild static/js/showroomReact.js --bundle --minify --outfile=static/js/showroomReact.bundle.js && npx esbuild static/js/core.js --bundle --minify --outfile=static/js/core.bundle.js",
+    "build:showroom": "npm run build:showroom:registry && npm run build:showroom:bundle",
+    "build": "npm run build:css && npm run build:ds-icons && npm run build:showroom",
     "check:django": "python3 manage.py check",
-    "lint": "npm run build:storybook:registry",
-    "test": "npm run build:storybook:registry",
+    "lint": "npm run build:showroom:registry",
+    "test": "npm run build:showroom:registry",
     "runserver": "python3 manage.py runserver"
   },
   "engines": {

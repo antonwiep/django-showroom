@@ -1,7 +1,7 @@
 [project]
-name = "django-storybook"
+name = "django-showroom"
 version = "0.1.0a1"
-description = "Django-native Storybook for building design systems with multi-framework adapters and shared recipe CSS"
+description = "Django-native Showroom for building design systems with multi-framework adapters and shared recipe CSS"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
@@ -14,7 +14,7 @@ dependencies = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["storybook*", "config*"]
+include = ["showroom*", "config*"]
 
 [project.optional-dependencies]
 dev = [

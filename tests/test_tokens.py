@@ -1,6 +1,6 @@
-"""Tests for storybook.catalog.tokens."""
+"""Tests for showroom.catalog.tokens."""
 
-from storybook.catalog.tokens import (
+from showroom.catalog.tokens import (
     TOKEN_PATTERN,
     _color_group,
     _sort_token_name,

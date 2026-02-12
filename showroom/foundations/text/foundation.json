@@ -1,0 +1,7 @@
+{
+  "slug": "text",
+  "label": "Text",
+  "type": "page",
+  "order": 30,
+  "template": "showroom/foundations/text/page.html"
+}

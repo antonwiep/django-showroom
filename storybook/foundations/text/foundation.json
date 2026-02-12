@@ -1,7 +1,0 @@
-{
-  "slug": "text",
-  "label": "Text",
-  "type": "page",
-  "order": 30,
-  "template": "storybook/foundations/text/page.html"
-}

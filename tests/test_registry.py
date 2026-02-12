@@ -1,6 +1,6 @@
-"""Tests for storybook.catalog.registry."""
+"""Tests for showroom.catalog.registry."""
 
-from storybook.catalog.registry import get_component, get_story, hydrate_controls
+from showroom.catalog.registry import get_component, get_story, hydrate_controls
 
 
 class TestGetStory:
