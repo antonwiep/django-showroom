@@ -2,7 +2,7 @@
 
 A Django-native component development environment for building design systems. Develop, document, and test atomic UI components in isolation — with multi-framework rendering, shared story contracts, and side-by-side comparison.
 
-<video src="docs/assets/demo.mp4" autoplay loop muted playsinline></video>
+![Django Showroom demo](docs/assets/demo.gif)
 
 ## Why this project
 
