@@ -2,7 +2,7 @@
 
 A Django-native Storybook JS alternative for building design systems. Develop, document, and test atomic UI components in isolation – with multi-framework rendering, shared story contracts, and side-by-side comparison.
 
-![Django Showroom demo](docs/assets/demo.gif)
+![Django Showroom demo](https://raw.githubusercontent.com/antonwiep/django-showroom/main/docs/assets/demo.gif)
 
 ## Why this project
 
@@ -101,13 +101,8 @@ Open: `http://127.0.0.1:8000/showroom/`
 
 ## Docs
 
-- [Architecture overview](docs/ARCHITECTURE.md)
-- [Contract details](docs/CONTRACTS.md)
-- [Adapter boundary](docs/ADAPTERS.md)
-- [Recipe model](docs/RECIPES.md)
-- [Split mode behavior](docs/SPLIT_VIEW.md)
-- [Adding components](docs/ADDING_COMPONENTS.md)
+Full documentation is on [GitHub](https://github.com/antonwiep/django-showroom/tree/main/docs).
 
 ## License
 
-[MIT](LICENSE)
+[MIT](https://github.com/antonwiep/django-showroom/blob/main/LICENSE)
