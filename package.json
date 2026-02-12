@@ -15,8 +15,8 @@
     "esbuild": "^0.23.1"
   },
   "scripts": {
-    "build:ds-icons": "node scripts/generate-ds-icons.mjs",
-    "build:storybook:registry": "node scripts/validate-storybook-components.mjs && node scripts/generate-storybook-react-registry.mjs",
+    "build:ds-icons": "node storybook/scripts/generate-ds-icons.mjs",
+    "build:storybook:registry": "node storybook/scripts/validate-storybook-components.mjs && node storybook/scripts/generate-storybook-react-registry.mjs",
     "build:storybook:bundle": "npx esbuild static/js/storybookReact.js --bundle --minify --outfile=static/js/storybookReact.bundle.js && npx esbuild static/js/core.js --bundle --minify --outfile=static/js/core.bundle.js",
     "build:storybook": "npm run build:storybook:registry && npm run build:storybook:bundle",
     "build": "npm run build:storybook",

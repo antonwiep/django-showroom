@@ -2,6 +2,8 @@
 
 A Django-native component development environment for building design systems. Develop, document, and test atomic UI components in isolation — with multi-framework rendering, shared story contracts, and side-by-side comparison.
 
+<video src="docs/assets/demo.mp4" autoplay loop muted playsinline></video>
+
 ## Why this project
 
 Most teams with Django + frontend islands struggle with two recurring issues:
@@ -35,25 +37,17 @@ For full details, see [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ```text
 .
-├── apps/
-│   └── storybook/            # Django host app (views, catalog, templates)
-├── packages/
-│   ├── story-core/            # Metadata contracts and validation
-│   ├── recipe-engine/         # CSS token and variant generation
-│   ├── adapter-django/        # Django template adapter
-│   ├── adapter-html/          # Static HTML adapter
-│   ├── adapter-cotton/        # Cotton component adapter
-│   ├── adapter-alpine/        # Alpine.js runtime adapter
-│   ├── adapter-js/            # Vanilla JavaScript adapter
-│   └── adapter-react/         # React preview adapter
-├── design-system/
-│   ├── cotton/ds/             # Example components (button, badge, text_field)
-│   └── src/                   # Design tokens (CSS variables)
-├── static/                    # CSS, JS bundles, icons
-├── scripts/                   # Build and validation scripts
-├── storybook_config/          # Django project settings
-├── docs/                      # Architecture and contributor docs
-└── .github/                   # CI workflows and issue templates
+├── storybook/               # Django host app (views, catalog, scripts, schemas)
+├── components/
+│   ├── cotton/ds/           # Example components (button, badge, text_field)
+│   ├── icons/               # Icon source (TSX → SVG pipeline)
+│   ├── react-utils/         # Shared React utilities (cn.ts)
+│   └── tokens.css           # Design tokens (Tailwind defaults)
+├── config/                  # Django project settings
+├── tests/                   # Test suite (pytest + pytest-django)
+├── static/                  # CSS, JS bundles, generated icons
+├── docs/                    # Architecture and contributor docs
+└── .github/                 # CI workflows and issue templates
 ```
 
 ## Getting started
@@ -96,7 +90,7 @@ Each component includes a `component.json` contract, stories, controls, a Cotton
 
 ## Adding your own components
 
-Create a new directory under `design-system/cotton/ds/your_component/` with:
+Create a new directory under `components/cotton/ds/your_component/` with:
 
 ```text
 your_component/
@@ -113,7 +107,7 @@ Then run `npm run build` to validate and regenerate the registry.
 
 ## Component scoping
 
-Limit which components appear in the Storybook navigation by setting `STORYBOOK_COMPONENT_ALLOWLIST` in `storybook_config/settings.py`:
+Limit which components appear in the Storybook navigation by setting `STORYBOOK_COMPONENT_ALLOWLIST` in `config/settings.py`:
 
 ```python
 STORYBOOK_COMPONENT_ALLOWLIST = ["button", "badge"]
@@ -142,12 +136,17 @@ Set it to `[]` or remove it to show all components.
 - [Adapter boundary](docs/ADAPTERS.md)
 - [Recipe model](docs/RECIPES.md)
 - [Split mode behavior](docs/SPLIT_VIEW.md)
+- [Adding components](docs/ADDING_COMPONENTS.md)
+- [Contributing](docs/CONTRIBUTING.md)
 
 ## Community and support
 
-- Usage and setup questions: GitHub Discussions
-- Bug reports: GitHub Issues using bug template
-- Security concerns: see [SECURITY.md](SECURITY.md)
+- Usage and setup questions: [GitHub Discussions](https://github.com/antonwiep/django-storybook/discussions)
+- Bug reports: [GitHub Issues](https://github.com/antonwiep/django-storybook/issues)
+
+## License
+
+[MIT](LICENSE)
 
 ## Status
 

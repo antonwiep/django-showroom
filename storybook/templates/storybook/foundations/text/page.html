@@ -1,0 +1,46 @@
+<div class="w-[min(1024px,92vw)]">
+    <div class="mb-6">
+        <h2 class="text-lg font-medium text-slate-950">Text Tokens</h2>
+        <p class="mt-1 text-sm text-slate-500">Auto-generated from <code class="text-mini-medium">components/tokens.css</code>.</p>
+    </div>
+
+    <div class="overflow-hidden rounded-8">
+        <table class="w-full">
+            <thead>
+                <tr>
+                    <th class="px-3 py-2 text-left text-mini-medium text-slate-700">Token</th>
+                    <th class="px-3 py-2 text-left text-mini-medium text-slate-700">Preview</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for token in text_tokens %}
+                    <tr>
+                        <td class="align-top px-3 py-2.5">
+                            <p class="text-mini-medium text-slate-800">{{ token.name }}</p>
+                            <p class="text-mini text-slate-500">{{ token.size_value }}</p>
+                            {% if token.font_weight_value %}
+                                <p class="text-mini text-slate-500">weight {{ token.font_weight_value }}</p>
+                            {% endif %}
+                            {% if token.line_height_value %}
+                                <p class="text-mini text-slate-500">line {{ token.line_height_value }}</p>
+                            {% endif %}
+                        </td>
+                        <td class="px-3 py-2.5">
+                            <p
+                                class="text-slate-950"
+                                style="
+                                    font-size: var({{ token.size_var }});
+                                    {% if token.font_weight_var %}font-weight: var({{ token.font_weight_var }});{% endif %}
+                                    {% if token.line_height_var %}line-height: var({{ token.line_height_var }});{% endif %}
+                                    {% if token.letter_spacing_var %}letter-spacing: var({{ token.letter_spacing_var }});{% endif %}
+                                "
+                            >
+                                The quick brown fox jumps over the lazy dog.
+                            </p>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,92 @@
+{
+  "label": {
+    "name": "label",
+    "label": "Label",
+    "type": "text"
+  },
+  "variant": {
+    "name": "variant",
+    "label": "Variant",
+    "type": "select",
+    "options": [
+      {
+        "value": "primary",
+        "label": "primary"
+      },
+      {
+        "value": "secondary",
+        "label": "secondary"
+      },
+      {
+        "value": "danger",
+        "label": "danger"
+      },
+      {
+        "value": "ghost",
+        "label": "ghost"
+      },
+      {
+        "value": "outline",
+        "label": "outline"
+      }
+    ]
+  },
+  "size": {
+    "name": "size",
+    "label": "Size",
+    "type": "select",
+    "options": [
+      {
+        "value": "large",
+        "label": "large"
+      },
+      {
+        "value": "medium",
+        "label": "medium"
+      },
+      {
+        "value": "compact",
+        "label": "compact"
+      },
+      {
+        "value": "small",
+        "label": "small"
+      }
+    ]
+  },
+  "disabled": {
+    "name": "disabled",
+    "label": "Disabled",
+    "type": "boolean"
+  },
+  "icon_start": {
+    "name": "iconStart",
+    "label": "Icon start",
+    "type": "select",
+    "options": [
+      {
+        "value": "",
+        "label": "none"
+      },
+      {
+        "value": "search",
+        "label": "search"
+      }
+    ]
+  },
+  "icon_end": {
+    "name": "iconEnd",
+    "label": "Icon end",
+    "type": "select",
+    "options": [
+      {
+        "value": "",
+        "label": "none"
+      },
+      {
+        "value": "search",
+        "label": "search"
+      }
+    ]
+  }
+}

@@ -1,1 +1,1 @@
-import "../../apps/storybook/storybookReact.runtime";
+import "../../storybook/storybookReact.runtime";

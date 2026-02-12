@@ -1,0 +1,69 @@
+@layer components {
+  .ds-text-field {
+    @apply flex flex-col gap-1.5;
+  }
+
+  .ds-text-field-label-row {
+    @apply flex items-center gap-1.5;
+  }
+
+  .ds-text-field-label {
+    @apply text-slate-700 text-sm-medium;
+  }
+
+  .ds-text-field-optional {
+    @apply text-slate-500 text-mini;
+  }
+
+  .ds-text-field-input-wrapper {
+    @apply flex items-center gap-1.5 rounded-8 border border-slate-400 bg-white px-2 transition-colors hover:not-focus-within:border-slate-500 focus-within:border-blue-600 focus-within:ring-2 focus-within:ring-blue-200;
+  }
+
+  .ds-text-field[data-size="md"] .ds-text-field-input-wrapper {
+    @apply h-8;
+  }
+
+  .ds-text-field[data-size="sm"] .ds-text-field-input-wrapper {
+    @apply h-7;
+  }
+
+  .ds-text-field[data-error="true"] .ds-text-field-input-wrapper {
+    @apply border-red-600 hover:not-focus-within:border-red-600 focus-within:border-red-600 focus-within:ring-red-200;
+  }
+
+  .ds-text-field[data-disabled="true"] .ds-text-field-input-wrapper {
+    @apply cursor-not-allowed opacity-50 hover:border-slate-400;
+  }
+
+  .ds-text-field-icon {
+    @apply shrink-0 text-slate-500 [&_svg]:size-4;
+  }
+
+  .ds-text-field-input {
+    @apply min-w-0 flex-1 bg-transparent text-slate-950 outline-none placeholder:text-slate-500;
+  }
+
+  .ds-text-field[data-size="md"] .ds-text-field-input {
+    @apply text-sm;
+  }
+
+  .ds-text-field[data-size="sm"] .ds-text-field-input {
+    @apply text-mini;
+  }
+
+  .ds-text-field[data-disabled="true"] .ds-text-field-input {
+    @apply cursor-not-allowed;
+  }
+
+  .ds-text-field-clear {
+    @apply shrink-0 cursor-pointer text-slate-500 hover:text-slate-700 [&_svg]:size-4;
+  }
+
+  .ds-text-field-error {
+    @apply text-red-600 text-mini;
+  }
+
+  .ds-text-field-story-wrap {
+    @apply w-64;
+  }
+}

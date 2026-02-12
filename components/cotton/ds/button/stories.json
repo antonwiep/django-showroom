@@ -1,0 +1,137 @@
+[
+  {
+    "slug": "default",
+    "name": "Default",
+    "template": "cotton/ds/button/stories/button.html",
+    "defaults": {
+      "label": "Primary Button",
+      "variant": "primary",
+      "size": "large",
+      "disabled": false,
+      "isActive": false,
+      "iconStart": "",
+      "iconEnd": ""
+    },
+    "controls": ["label", "variant", "size", "disabled", "icon_start", "icon_end"]
+  },
+  {
+    "slug": "secondary",
+    "name": "Secondary",
+    "template": "cotton/ds/button/stories/button.html",
+    "defaults": {
+      "label": "Secondary Button",
+      "variant": "secondary",
+      "size": "large",
+      "disabled": false,
+      "isActive": false,
+      "iconStart": "",
+      "iconEnd": ""
+    },
+    "controls": ["label", "variant", "size", "disabled", "icon_start", "icon_end"]
+  },
+  {
+    "slug": "danger",
+    "name": "Danger",
+    "template": "cotton/ds/button/stories/button.html",
+    "defaults": {
+      "label": "Danger Button",
+      "variant": "danger",
+      "size": "large",
+      "disabled": false,
+      "isActive": false,
+      "iconStart": "",
+      "iconEnd": ""
+    },
+    "controls": ["label", "variant", "size", "disabled", "icon_start", "icon_end"]
+  },
+  {
+    "slug": "ghost",
+    "name": "Ghost",
+    "template": "cotton/ds/button/stories/button.html",
+    "defaults": {
+      "label": "Ghost Button",
+      "variant": "ghost",
+      "size": "large",
+      "disabled": false,
+      "isActive": false,
+      "iconStart": "",
+      "iconEnd": ""
+    },
+    "controls": ["label", "variant", "size", "disabled", "icon_start", "icon_end"]
+  },
+  {
+    "slug": "outline",
+    "name": "Outline",
+    "template": "cotton/ds/button/stories/button.html",
+    "defaults": {
+      "label": "Outline Button",
+      "variant": "outline",
+      "size": "large",
+      "disabled": false,
+      "isActive": false,
+      "iconStart": "",
+      "iconEnd": ""
+    },
+    "controls": ["label", "variant", "size", "disabled", "icon_start", "icon_end"]
+  },
+  {
+    "slug": "with-icon",
+    "name": "With Icon",
+    "template": "cotton/ds/button/stories/button.html",
+    "defaults": {
+      "label": "Button with Icon",
+      "variant": "primary",
+      "size": "large",
+      "disabled": false,
+      "isActive": false,
+      "iconStart": "search",
+      "iconEnd": ""
+    },
+    "controls": ["label", "variant", "size", "disabled", "icon_start", "icon_end"]
+  },
+  {
+    "slug": "with-icon-end",
+    "name": "With Icon End",
+    "template": "cotton/ds/button/stories/button.html",
+    "defaults": {
+      "label": "Button with Icon End",
+      "variant": "primary",
+      "size": "large",
+      "disabled": false,
+      "isActive": false,
+      "iconStart": "",
+      "iconEnd": "search"
+    },
+    "controls": ["label", "variant", "size", "disabled", "icon_start", "icon_end"]
+  },
+  {
+    "slug": "with-icons-both",
+    "name": "With Icons Both",
+    "template": "cotton/ds/button/stories/button.html",
+    "defaults": {
+      "label": "Button with Both Icons",
+      "variant": "primary",
+      "size": "large",
+      "disabled": false,
+      "isActive": false,
+      "iconStart": "search",
+      "iconEnd": "search"
+    },
+    "controls": ["label", "variant", "size", "disabled", "icon_start", "icon_end"]
+  },
+  {
+    "slug": "disabled",
+    "name": "Disabled",
+    "template": "cotton/ds/button/stories/button.html",
+    "defaults": {
+      "label": "Disabled Button",
+      "variant": "primary",
+      "size": "large",
+      "disabled": true,
+      "isActive": false,
+      "iconStart": "",
+      "iconEnd": ""
+    },
+    "controls": ["label", "variant", "size", "disabled", "icon_start", "icon_end"]
+  }
+]

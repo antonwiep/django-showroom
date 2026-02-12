@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
   - name: Questions and discussion
-    url: https://github.com/your-org/your-repo/discussions
+    url: https://github.com/antonwiep/django-storybook/discussions
     about: Use discussions for help and broader design questions.

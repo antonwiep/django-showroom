@@ -1,0 +1,174 @@
+/**
+ * Design System Tokens
+ * Single source of truth for all design tokens.
+ * Colors use Tailwind's default palette (oklch values).
+ * Import this file in any CSS that needs access to these tokens.
+ */
+
+@theme {
+  /* ============================================
+   * COLORS — Tailwind default palette
+   * ============================================ */
+
+  /** Slate (neutral greys) */
+  --color-slate-50: oklch(0.984 0.003 247.858);
+  --color-slate-100: oklch(0.968 0.007 247.896);
+  --color-slate-200: oklch(0.929 0.013 255.508);
+  --color-slate-300: oklch(0.869 0.022 252.894);
+  --color-slate-400: oklch(0.704 0.04 256.788);
+  --color-slate-500: oklch(0.554 0.046 257.417);
+  --color-slate-600: oklch(0.446 0.043 257.281);
+  --color-slate-700: oklch(0.372 0.044 257.287);
+  --color-slate-800: oklch(0.279 0.041 260.031);
+  --color-slate-900: oklch(0.208 0.042 265.755);
+  --color-slate-950: oklch(0.129 0.042 264.695);
+
+  /** Blue (primary / accent) */
+  --color-blue-50: oklch(0.97 0.014 254.604);
+  --color-blue-100: oklch(0.932 0.032 255.585);
+  --color-blue-200: oklch(0.882 0.059 254.128);
+  --color-blue-300: oklch(0.809 0.105 251.813);
+  --color-blue-400: oklch(0.707 0.165 254.624);
+  --color-blue-500: oklch(0.623 0.214 259.815);
+  --color-blue-600: oklch(0.546 0.245 262.881);
+  --color-blue-700: oklch(0.488 0.243 264.376);
+  --color-blue-800: oklch(0.424 0.199 265.638);
+  --color-blue-900: oklch(0.379 0.146 265.522);
+  --color-blue-950: oklch(0.282 0.091 267.935);
+
+  /** Amber (warning / yellow) */
+  --color-amber-50: oklch(0.987 0.022 95.277);
+  --color-amber-100: oklch(0.962 0.059 95.617);
+  --color-amber-200: oklch(0.924 0.12 95.746);
+  --color-amber-300: oklch(0.879 0.169 91.605);
+  --color-amber-400: oklch(0.828 0.189 84.429);
+  --color-amber-500: oklch(0.769 0.188 70.08);
+  --color-amber-600: oklch(0.666 0.179 58.318);
+  --color-amber-700: oklch(0.555 0.163 48.998);
+  --color-amber-800: oklch(0.473 0.137 46.201);
+  --color-amber-900: oklch(0.414 0.112 45.904);
+  --color-amber-950: oklch(0.279 0.077 45.635);
+
+  /** Red (danger) */
+  --color-red-50: oklch(0.971 0.013 17.38);
+  --color-red-100: oklch(0.936 0.032 17.717);
+  --color-red-200: oklch(0.885 0.062 18.334);
+  --color-red-300: oklch(0.808 0.114 19.571);
+  --color-red-400: oklch(0.704 0.191 22.216);
+  --color-red-500: oklch(0.637 0.237 25.331);
+  --color-red-600: oklch(0.577 0.245 27.325);
+  --color-red-700: oklch(0.505 0.213 27.518);
+  --color-red-800: oklch(0.444 0.177 26.899);
+  --color-red-900: oklch(0.396 0.141 25.723);
+  --color-red-950: oklch(0.258 0.092 26.042);
+
+  /** Green (success) */
+  --color-green-50: oklch(0.982 0.018 155.826);
+  --color-green-100: oklch(0.962 0.044 156.643);
+  --color-green-200: oklch(0.925 0.084 155.995);
+  --color-green-300: oklch(0.871 0.15 154.449);
+  --color-green-400: oklch(0.792 0.209 151.711);
+  --color-green-500: oklch(0.723 0.219 149.579);
+  --color-green-600: oklch(0.627 0.194 149.214);
+  --color-green-700: oklch(0.527 0.154 150.069);
+  --color-green-800: oklch(0.448 0.119 151.328);
+  --color-green-900: oklch(0.393 0.095 152.535);
+  --color-green-950: oklch(0.266 0.065 152.934);
+
+  /** Alpha (black transparency) */
+  --color-alpha-2: oklch(0 0 0 / 0.02);
+  --color-alpha-4: oklch(0 0 0 / 0.04);
+  --color-alpha-6: oklch(0 0 0 / 0.06);
+  --color-alpha-8: oklch(0 0 0 / 0.08);
+  --color-alpha-10: oklch(0 0 0 / 0.1);
+  --color-alpha-12: oklch(0 0 0 / 0.12);
+  --color-alpha-16: oklch(0 0 0 / 0.16);
+  --color-alpha-24: oklch(0 0 0 / 0.24);
+  --color-alpha-36: oklch(0 0 0 / 0.36);
+  --color-alpha-48: oklch(0 0 0 / 0.48);
+  --color-alpha-80: oklch(0 0 0 / 0.8);
+
+  /* ============================================
+   * TYPOGRAPHY
+   * ============================================ */
+
+  --text-micro: 10px;
+  --text-micro--font-weight: var(--font-weight--regular);
+  --text-micro--line-height: 14px;
+
+  --text-micro-medium: 10px;
+  --text-micro-medium--font-weight: var(--font-weight--medium);
+  --text-micro-medium--line-height: 14px;
+
+  --text-macro-semibold: 8px;
+  --text-macro-semibold--font-weight: 600;
+  --text-macro-semibold--line-height: 14px;
+  --text-macro-semibold--letter-spacing: 0.5px;
+
+  --text-mini: 12px;
+  --text-mini--font-weight: var(--font-weight--regular);
+  --text-mini--line-height: 15px;
+
+  --text-mini-medium: 12px;
+  --text-mini-medium--font-weight: var(--font-weight--medium);
+  --text-mini-medium--line-height: 15px;
+
+  --text-sm: 13px;
+  --text-sm--font-weight: var(--font-weight--regular);
+  --text-sm--line-height: 18px;
+  --text-sm--letter-spacing: -0.28px;
+
+  --text-sm-medium: 13px;
+  --text-sm-medium--font-weight: var(--font-weight--medium);
+  --text-sm-medium--line-height: 18px;
+  --text-sm-medium--letter-spacing: -0.28px;
+
+  --text-regular: 14px;
+  --text-regular--font-weight: var(--font-weight--regular);
+  --text-regular--line-height: 20px;
+  --text-regular--letter-spacing: -0.13px;
+
+  --text-regular-medium: 14px;
+  --text-regular-medium--font-weight: var(--font-weight--medium);
+  --text-regular-medium--line-height: 20px;
+  --text-regular-medium--letter-spacing: -0.13px;
+
+  /* ============================================
+   * RADIUS
+   * ============================================ */
+
+  --radius-0: 0px;
+  --radius-2: 2px;
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-full: 999px;
+
+  /* ============================================
+   * SHADOWS
+   * ============================================ */
+
+  --shadow-xs: 0 0 0 1px var(--color-alpha-6), 0 1px 3px 0 var(--color-alpha-4);
+  --shadow-md:
+    0px 0px 1px 0px rgba(0, 0, 0, 0.27),
+    0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0px 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+@layer base {
+  :root {
+    --font-weight--regular: 450;
+    --font-weight--medium: 500;
+  }
+}
+
+@utility scrollbar-hidden {
+  -ms-scrollbar-width: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

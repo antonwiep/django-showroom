@@ -1,5 +1,3 @@
-* @antonwieprecht
-/docs/* @antonwieprecht
-/packages/story-core/* @antonwieprecht
-/packages/recipe-engine/* @antonwieprecht
-/apps/storybook/* @antonwieprecht
+* @antonwiep
+/docs/* @antonwiep
+/storybook/* @antonwiep

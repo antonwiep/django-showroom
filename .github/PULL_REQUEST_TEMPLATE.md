@@ -24,8 +24,8 @@
 
 - [ ] Lint
 - [ ] Tests
-- [ ] Typecheck
-- [ ] Contract validation
+- [ ] Build (contract validation + JS bundles)
+- [ ] Django check
 - [ ] Split view checks (if relevant)
 
 ## Screenshots (if UI behavior changed)

@@ -1,0 +1,70 @@
+@layer components {
+  .ds-badge {
+    @apply inline-flex items-center overflow-hidden rounded-4 border border-[0.5px];
+    border-color: var(--ds-badge-ring-color);
+  }
+
+  .ds-badge[data-type="neutral"] {
+    @apply bg-slate-100 text-slate-500;
+    --ds-badge-ring-color: var(--color-slate-300);
+  }
+
+  .ds-badge[data-type="pending"] {
+    @apply bg-amber-100 text-amber-700;
+    --ds-badge-ring-color: var(--color-amber-300);
+  }
+
+  .ds-badge[data-type="info"] {
+    @apply bg-blue-100 text-blue-700;
+    --ds-badge-ring-color: var(--color-blue-300);
+  }
+
+  .ds-badge[data-type="danger"] {
+    @apply bg-red-100 text-red-700;
+    --ds-badge-ring-color: var(--color-red-300);
+  }
+
+  .ds-badge[data-type="warning"] {
+    @apply bg-amber-100 text-amber-800;
+    --ds-badge-ring-color: var(--color-amber-300);
+  }
+
+  .ds-badge[data-type="success"] {
+    @apply bg-green-100 text-green-700;
+    --ds-badge-ring-color: var(--color-green-300);
+  }
+
+  .ds-badge[data-type="muted"] {
+    @apply bg-slate-200 text-slate-500;
+    --ds-badge-ring-color: var(--color-slate-500);
+  }
+
+  .ds-badge-main,
+  .ds-badge-arrow {
+    @apply transition-colors;
+  }
+
+  .ds-badge-main {
+    @apply flex h-5 cursor-pointer items-center justify-center px-1.5 py-1 text-mini-medium;
+  }
+
+  .ds-badge-arrow {
+    @apply flex h-5 w-4.5 cursor-pointer items-center justify-center border-l border-l-[0.5px];
+    border-left-color: var(--ds-badge-ring-color);
+  }
+
+  .ds-badge-main:hover,
+  .ds-badge-arrow:hover {
+    @apply bg-alpha-2;
+  }
+
+  .ds-badge-main:disabled,
+  .ds-badge-arrow:disabled {
+    @apply cursor-default;
+  }
+
+  .ds-badge-main:disabled:hover,
+  .ds-badge-arrow:disabled:hover {
+    @apply bg-transparent;
+  }
+}

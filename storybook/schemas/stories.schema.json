@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/antonwiep/django-storybook/raw/main/storybook/schemas/stories.schema.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["slug", "name", "template"],
+    "properties": {
+      "slug": { "type": "string", "minLength": 1 },
+      "name": { "type": "string", "minLength": 1 },
+      "template": { "type": "string", "minLength": 1 },
+      "defaults": { "type": "object" },
+      "controls": {
+        "type": "array",
+        "items": { "type": "string", "minLength": 1 }
+      }
+    },
+    "additionalProperties": true
+  }
+}

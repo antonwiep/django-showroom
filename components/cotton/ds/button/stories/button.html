@@ -1,0 +1,22 @@
+{% load ds_icons %}
+{% ds_icon "search" "size-4" as icon_search %}
+
+<div class="flex min-h-52 min-w-[420px] items-center justify-center">
+  <c-ds.button
+    x-bind:data-variant="['primary', 'secondary', 'danger', 'ghost', 'outline'].includes(args.variant) ? args.variant : 'primary'"
+    x-bind:data-size="['large', 'medium', 'compact', 'small'].includes(args.size) ? args.size : 'large'"
+    x-bind:data-disabled="Boolean(args.disabled) ? 'true' : 'false'"
+    x-bind:data-active="Boolean(args.isActive) ? 'true' : 'false'"
+    x-bind:disabled="Boolean(args.disabled)"
+  >
+    <c-slot name="icon_start">
+      <span class="ds-button-icon" x-show="(args.iconStart || '') === 'search'">{{ icon_search }}</span>
+    </c-slot>
+
+    <span x-text="args.label || 'Button'"></span>
+
+    <c-slot name="icon_end">
+      <span class="ds-button-icon" x-show="(args.iconEnd || '') === 'search'">{{ icon_search }}</span>
+    </c-slot>
+  </c-ds.button>
+</div>

@@ -1,0 +1,89 @@
+@layer components {
+  .ds-button {
+    @apply inset-ring inset-ring-transparent inline-flex cursor-pointer items-center justify-center transition-colors;
+  }
+
+  .ds-button svg {
+    @apply size-4;
+  }
+
+  .ds-button .ds-button-icon:only-child,
+  .ds-button > svg:only-child {
+    @apply -mx-1;
+  }
+
+  .ds-button-label {
+    @apply inline-flex items-center justify-center;
+  }
+
+  .ds-button-label[data-size="large"] {
+    @apply px-1;
+  }
+
+  .ds-button-label[data-size="medium"],
+  .ds-button-label[data-size="compact"],
+  .ds-button-label[data-size="small"] {
+    @apply px-0.5;
+  }
+
+  .ds-button[data-size="large"] {
+    @apply h-10 gap-1 rounded-10 px-3 text-sm-medium;
+  }
+
+  .ds-button[data-size="medium"] {
+    @apply h-8 gap-1 rounded-8 px-2 text-sm-medium;
+  }
+
+  .ds-button[data-size="compact"] {
+    @apply gap-1 rounded-6 px-1.5 py-1.25 text-sm-medium;
+  }
+
+  .ds-button[data-size="small"] {
+    @apply rounded-6 px-1.5 py-1 text-mini-medium;
+  }
+
+  .ds-button[data-variant="primary"] {
+    @apply inset-ring-alpha-6 bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800;
+  }
+
+  .ds-button[data-variant="secondary"] {
+    @apply bg-slate-200 text-slate-700 hover:bg-slate-300 active:bg-slate-400;
+  }
+
+  .ds-button[data-variant="danger"] {
+    @apply inset-ring-alpha-6 bg-red-600 text-white hover:bg-red-700 active:bg-red-800;
+  }
+
+  .ds-button[data-variant="ghost"] {
+    @apply text-slate-700 hover:bg-slate-300 active:bg-slate-400;
+  }
+
+  .ds-button[data-variant="outline"] {
+    @apply inset-ring-alpha-10 text-slate-700 hover:bg-slate-300 active:bg-slate-400;
+  }
+
+  .ds-button[data-active="true"][data-disabled="false"][data-variant="primary"] {
+    @apply bg-blue-700;
+  }
+
+  .ds-button[data-active="true"][data-disabled="false"][data-variant="secondary"] {
+    @apply bg-slate-300;
+  }
+
+  .ds-button[data-active="true"][data-disabled="false"][data-variant="danger"] {
+    @apply bg-red-700;
+  }
+
+  .ds-button[data-active="true"][data-disabled="false"][data-variant="ghost"] {
+    @apply bg-slate-300;
+  }
+
+  .ds-button[data-active="true"][data-disabled="false"][data-variant="outline"] {
+    @apply bg-slate-200;
+  }
+
+  .ds-button[data-disabled="true"],
+  .ds-button:disabled {
+    @apply !inset-ring-transparent cursor-not-allowed bg-slate-200 text-slate-600 hover:bg-slate-200 active:bg-slate-200;
+  }
+}

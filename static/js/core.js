@@ -2,8 +2,8 @@
 import persist from '@alpinejs/persist';
 import Alpine from 'alpinejs';
 
-// Import design-system component directives
-import '../../design-system/cotton/alpine.js';
+// Import component directives
+import '../../components/cotton/alpine.js';
 
 // Initialize Alpine
 document.addEventListener('DOMContentLoaded', () => {

@@ -1,2 +1,0 @@
-django>=5.1.0
-django-cotton>=2.0.3

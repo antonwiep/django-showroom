@@ -1,0 +1,30 @@
+<c-vars label="" type="neutral" main_enabled="true" arrow_enabled="true" class_name="" />
+
+<div
+  x-data="{
+    label: '{{ label|default:''|escapejs }}',
+    type: '{{ type|default:'neutral'|escapejs }}',
+    mainEnabled: '{{ main_enabled|default:'true'|lower|escapejs }}' === 'true',
+    arrowEnabled: '{{ arrow_enabled|default:'true'|lower|escapejs }}' === 'true'
+  }"
+  class="ds-badge {{ class_name }} {{ attrs.class }}"
+  x-bind:data-type="['neutral', 'pending', 'info', 'danger', 'warning', 'success', 'muted'].includes(type) ? type : 'neutral'"
+  {{ attrs }}
+>
+  <button
+    type="button"
+    class="ds-badge-main"
+    x-bind:disabled="!mainEnabled"
+    @click="$dispatch('ds-badge-main')"
+  >
+    <span x-text="label">{{ label }}</span>
+  </button>
+  <button
+    type="button"
+    class="ds-badge-arrow"
+    x-bind:disabled="!arrowEnabled"
+    @click="$dispatch('ds-badge-arrow')"
+  >
+    <svg class="size-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg>
+  </button>
+</div>
