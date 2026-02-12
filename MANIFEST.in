@@ -1,0 +1,7 @@
+include LICENSE
+include README.md
+recursive-include showroom/templates *.html
+recursive-include showroom/foundations *.json
+recursive-include showroom/schemas *.json
+recursive-include showroom/scripts *.mjs
+include showroom/*.js

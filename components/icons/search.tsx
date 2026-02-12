@@ -1,5 +1,5 @@
-// Heroicons v2 — Magnifying Glass (outline)
-// https://heroicons.com — MIT License
+// Heroicons v2 – Magnifying Glass (outline)
+// https://heroicons.com – MIT License
 export const IconSearch = ({ className = "" }: { className?: string }) => {
   return (
     <svg

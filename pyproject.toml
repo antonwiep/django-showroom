@@ -1,25 +1,54 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "django-showroom"
 version = "0.1.0a1"
-description = "Django-native Showroom for building design systems with multi-framework adapters and shared recipe CSS"
+description = "Django-native component development environment for building design systems"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
 authors = [
   { name = "Anton Wieprecht" }
 ]
+keywords = ["django", "components", "design-system", "showroom"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Django",
+    "Framework :: Django :: 5.1",
+    "Framework :: Django :: 5.2",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries",
+]
 dependencies = [
   "django>=5.1.0",
   "django-cotton>=2.0.3",
 ]
 
-[tool.setuptools.packages.find]
-include = ["showroom*", "config*"]
+[project.urls]
+Homepage = "https://github.com/antonwiep/django-showroom"
 
 [project.optional-dependencies]
 dev = [
     "pytest>=8.0",
     "pytest-django>=4.8",
+]
+
+[tool.setuptools.packages.find]
+include = ["showroom*"]
+
+[tool.setuptools.package-data]
+showroom = [
+    "templates/**/*.html",
+    "foundations/**/*.json",
+    "schemas/*.json",
+    "scripts/*.mjs",
+    "*.js",
 ]
 
 [tool.pytest.ini_options]

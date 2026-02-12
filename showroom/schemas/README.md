@@ -6,10 +6,10 @@ Framework-agnostic contracts and validation logic for component stories.
 
 ## What this package defines
 
-- **`component.json` schema** — component metadata (slug, label, type, adapter paths)
-- **`stories.json` schema** — story definitions with defaults and control references
-- **`controls.json` schema** — control field definitions (type, options, defaults)
-- **Validation** — JSON Schema validators for all contract files
+- **`component.json` schema** – component metadata (slug, label, type, adapter paths)
+- **`stories.json` schema** – story definitions with defaults and control references
+- **`controls.json` schema** – control field definitions (type, options, defaults)
+- **Validation** – JSON Schema validators for all contract files
 
 ## Key principle
 
