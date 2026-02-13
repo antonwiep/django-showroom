@@ -13,6 +13,8 @@ Most teams with Django + frontend islands struggle with two recurring issues:
 
 This architecture solves both by making contracts and styling framework-agnostic first, then implementing thin adapters.
 
+Works with any Django template approach — the included examples use [Django Cotton](https://django-cotton.com/) and [Alpine.js](https://alpinejs.dev/) for component encapsulation and interactivity, but plain Django templates and vanilla HTML work just as well.
+
 ## Installation
 
 ```bash
