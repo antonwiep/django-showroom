@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "django-showroom"
-version = "0.1.0a1"
+version = "0.1.0a2"
 description = "Django-native component development environment for building design systems"
 readme = "README.md"
 requires-python = ">=3.11"
